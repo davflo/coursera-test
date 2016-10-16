@@ -13,6 +13,8 @@
             if ($scope.dishesString.length) {
                 dishesList = $scope.dishesString.split(',');
                 $scope.message = (dishesList.length > 3) ? 'Too much!' : 'Enjoy!';
+            } else {
+                $scope.message = 'Please enter data first';
             }
         };
 
