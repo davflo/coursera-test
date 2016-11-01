@@ -5,7 +5,7 @@
         .controller('NarrowItDownController', NarrowItDownController)
         .service('MenuSearchService', MenuSearchService)
         .constant('MenuApiBasePath', ' https://davids-restaurant.herokuapp.com/')
-        .directive('foundItems', foundItems);
+        .directive('foundItems', FoundItemsDirective);
 
     NarrowItDownController.$inject = ['MenuSearchService'];
     MenuSearchService.$inject = ['$http', '$q', 'MenuApiBasePath'];
@@ -71,7 +71,7 @@
         };
     }
 
-    function foundItems() {
+    function FoundItemsDirective() {
         var ddo = {
             restrict: 'E',
             templateUrl: 'templates/foundItems.html',
