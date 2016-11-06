@@ -1,0 +1,8 @@
+<div>
+    <ol>
+        <li data-ng-repeat="category in $ctrl.categories"
+            data-ui-sref="categoryDetail({categoryShortName: category.short_name})">
+            {{category.name}}
+        </li>
+    </ol>
+</div>
